@@ -278,6 +278,12 @@
     .foot { padding: var(--v-3) var(--v-gutter); }
     .foot__more { display: none; }
   }
+  /* плашка «демо для заказчика»: для показа на Kwork, в Тильду не переносится.
+     Снимается по «убери плашку демо» и при упаковке. Без анимации, видна без скролла. */
+  .demo-for { display: inline-flex; align-items: center; gap: .6em; margin: 0 0 var(--v-4);
+    font-size: var(--v-t-xs); letter-spacing: .04em; font-weight: 500; color: var(--v-ink);
+    background: color-mix(in oklab, var(--v-surface) 85%, transparent); border: 1px solid var(--v-hair-strong);
+    border-radius: 999px; padding: .42em .95em; }
 </style>
 </head>
 <body>
@@ -314,6 +320,8 @@
         </figure>
         <div class="v-scrim v-scrim--band hero__scrim" aria-hidden="true"></div>
         <div class="v-copy hero__copy hero__copy--top" data-v-cue="0 1 0 0">
+          <!-- плашка демо для заказчика: снимается по «убери плашку демо», в Тильду не переносится -->
+          <p class="demo-for">Демо для заказчика</p>
           <p class="hero__label">Уборка квартир · поддерживающая, генеральная, после ремонта</p>
           <h1 class="v-display v-display--xl" data-v-kinetic="lines">Уборка квартир в {{город}} по списку из 36 пунктов</h1>
           <p class="v-lede">Кухня, санузел, комнаты и прихожая – что входит, по пунктам ниже. Принимаете по ним же. Цена по метражу до приезда.</p>
